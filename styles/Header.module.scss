@@ -1,0 +1,111 @@
+@import "./reuseable.scss";
+
+.header {
+  background-color: $primary-color;
+  padding         : 0.75rem 0;
+  box-shadow      : 0px -10px 10px 10px rgba(0, 0, 0, 0.75);
+  position        : sticky;
+  width           : 100%;
+  top             : 0;
+  left            : 0;
+  right           : 0;
+  z-index         : 1;
+
+  .header_wrapper {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+
+    .header_left {
+      a {
+        color          : $basic-light;
+        text-decoration: none;
+        font-weight    : bold;
+        font-size      : 1.2rem;
+
+        @media (max-width:768px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .header_mid {}
+
+
+    .header_right {
+      display        : flex;
+      justify-content: space-between;
+      align-items    : center;
+
+      a {
+        color          : $basic-light;
+        text-decoration: none;
+        text-transform : uppercase;
+        font-weight    : bold;
+        font-size      : 0.9rem;
+        padding        : 0.75rem 1.5rem;
+        margin         : 0 1rem 0 0;
+        border         : 2px solid $basic-light;
+        border-radius  : 2rem;
+        transition     : 0.25s all ease;
+
+        &:hover {
+          background-color: $basic-light;
+          color           : $primary-color;
+        }
+      }
+
+      svg {
+        display  : none;
+        fill     : $basic-light;
+        font-size: 1.8rem;
+        cursor   : pointer;
+      }
+
+      @media (max-width:768px) {
+        a {
+          display: none;
+        }
+
+        svg {
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+
+  .menu {
+    position        : absolute;
+    display         : none;
+    top             : 100%;
+    right           : 0.75rem;
+    width           : 200px;
+    background-color: $basic-light;
+    box-shadow      : 0px 5px 10px -5px rgba(0, 0, 0, 0.7);
+    border-radius   : 0 0 .5rem .5rem;
+    overflow        : hidden;
+
+    a {
+      display        : block;
+      color          : $primary-color;
+      text-decoration: none;
+      text-transform : uppercase;
+      font-weight    : bold;
+      font-size      : 0.9rem;
+      padding        : 0.75rem 1.5rem;
+      transition     : 0.25s all ease;
+
+      &:hover {
+        color           : $basic-light;
+        background-color: $primary-color;
+      }
+    }
+
+    @media (max-width:768px) {
+      display: block;
+    }
+  }
+
+
+}

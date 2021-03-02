@@ -1,0 +1,41 @@
+@import "./reuseable.scss";
+
+.home_main {
+    background-color: $basic-offWhite;
+}
+
+.home_wrapper {
+    padding        : 2rem 0 0 0;
+    min-height     : 65vh;
+    display        : flex;
+    justify-content: space-between;
+    position       : relative;
+
+    .left_col,
+    .right_col {
+        position        : sticky;
+        top             : 6.5rem;
+        width           : 25%;
+        max-height      : 65vh;
+        background-color: $basic-light;
+        border-radius   : 0.25rem;
+
+        @media (max-width:991px) {
+            display: none;
+        }
+    }
+
+    .mid_col {
+        width  : 50%;
+        padding: 0 1rem 10rem;
+
+        @media (max-width:991px) {
+            width  : 100%;
+            padding: 0 0;
+        }
+
+        .noData {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@import "./reuseable.scss";
+
+.general_container {
+  max-width: 1240px;
+  margin   : 0 auto;
+  padding  : 0 1.2rem;
+}
+
+::selection {
+  background-color: $primary-color;
+  color           : $basic-light;
+}
+
+html {
+  font-size  : 16px;
+  font-family: 'Roboto', sans-serif;
+
+
+  @media (max-width : 991px) {
+    font-size: 14px;
+  }
+
+  @media (max-width : 768px) {
+    font-size: 12px;
+  }
+
+}
+
+body {
+  margin    : 0rem;
+  overflow-x: hidden;
+}
+
+.loader {
+  border           : 0.3rem solid $basic-light-grey;
+  border-top       : 0.3rem solid $primary-color;
+  border-radius    : 50%;
+  width            : 2rem;
+  height           : 2rem;
+  margin           : 1rem auto;
+  -webkit-animation: spin 0.5s linear infinite;
+  animation        : spin 0.5s linear infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.notFound_wrapper {
+  text-align: center;
+
+  .notFound_img {
+    max-width: 100vw;
+
+  }
+}
